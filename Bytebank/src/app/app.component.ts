@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Bytebank';
+  transferencia: any;
+
+
+  transferir($event){
+    console.log($event);
+    this.transferencia = $event;
+  }
+
 }
+
